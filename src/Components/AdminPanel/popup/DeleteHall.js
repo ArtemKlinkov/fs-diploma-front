@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useContext } from "react";
-import HallContext from "../contexts/HallContext";
-import closeButton from "../img/close.png"
+import HallContext from "../../../contexts/HallContext";
+import closeButton from "../../../img/close.png"
 
 function DeleteHall() {
   const {showDeletePopup, handleShowDeletePopup, deletingHall, handleDelete} = useContext(HallContext);

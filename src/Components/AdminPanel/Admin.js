@@ -2,18 +2,18 @@ import React, { useContext, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import Header from './Header';
 import HallController from './HallController';
-import AuthContext from '../contexts/AuthContext';
-import HallProvider from '../Providers/HallProvider';
+import AuthContext from '../../contexts/AuthContext';
+import HallProvider from '../../Providers/HallProvider';
 import HallConfig from './HallConfig';
-import DeleteHall from './DeleteHall';
-import AddHall from './AddHall';
+import DeleteHall from './popup/DeleteHall';
+import AddHall from './popup/AddHall';
 import PriceConfig from './PriceConfig';
 import Schedule from './Schedule';
 import OpenSales from './OpenSales';
-import MoviesProvider from '../Providers/MoviesProvider';
-import AddMovie from './AddMovie';
-import AddMovieToTimeline from './AddMovieToTimeline';
-import DeleteMovieFromTimeline from './DeleteMovieFromTimeline';
+import MoviesProvider from '../../Providers/MoviesProvider';
+import AddMovie from './popup/AddMovie';
+import AddMovieToTimeline from './popup/AddMovieToTimeline';
+import DeleteMovieFromTimeline from './popup/DeleteMovieFromTimeline';
 
 
 

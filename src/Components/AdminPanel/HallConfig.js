@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect, useContext } from "react";
-import HallContext from "../contexts/HallContext";
+import HallContext from "../../contexts/HallContext";
 import Chair from "./Chair";
 import ControllerHeader from "./ControllerHeader";
 
-import AuthContext from "../contexts/AuthContext";
-import apiClient from "../services/api";
+import AuthContext from "../../contexts/AuthContext";
+import apiClient from "../../services/api";
 
 function HallConfig() {
   const { token } = useContext(AuthContext);

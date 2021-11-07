@@ -1,8 +1,8 @@
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 // import './App.css';
 import './normalize.css';
-import Login from './Components/Login';
-import Admin from './Components/Admin';
+import Login from './Components/AdminPanel/Login';
+import Admin from './Components/AdminPanel/Admin';
 import AuthProvider from './Providers/AuthProvider';
 
 

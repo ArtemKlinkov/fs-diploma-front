@@ -3,10 +3,10 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect, useContext } from "react";
-import HallContext from "../contexts/HallContext";
+import HallContext from "../../contexts/HallContext";
 import ControllerHeader from "./ControllerHeader";
-import apiClient from "../services/api";
-import AuthContext from "../contexts/AuthContext";
+import apiClient from "../../services/api";
+import AuthContext from "../../contexts/AuthContext";
 
 function PriceConfig() {
   const { token } = useContext(AuthContext);

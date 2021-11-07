@@ -2,9 +2,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useState } from "react";
-import closeButton from "../img/close.png"
-import HallContext from "../contexts/HallContext";
-import MoviesContext from "../contexts/MoviesContext";
+import closeButton from "../../../img/close.png"
+import MoviesContext from "../../../contexts/MoviesContext";
 
 function DeleteMovieFromTimeline() {
 

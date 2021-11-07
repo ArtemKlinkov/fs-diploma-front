@@ -2,8 +2,8 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect, useContext, useRef } from "react";
-import HallContext from "../contexts/HallContext";
-import MoviesContext from "../contexts/MoviesContext";
+import HallContext from "../../contexts/HallContext";
+import MoviesContext from "../../contexts/MoviesContext";
 
 import ControllerHeader from "./ControllerHeader";
 

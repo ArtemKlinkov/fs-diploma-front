@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect, useContext } from "react";
-import HallContext from "../contexts/HallContext";
+import HallContext from "../../contexts/HallContext";
 import ControllerHeader from "./ControllerHeader";
 
 function HallController() {

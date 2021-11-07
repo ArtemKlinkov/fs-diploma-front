@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect, useContext } from "react";
-import AuthContext from "../contexts/AuthContext";
-import MoviesContext from "../contexts/MoviesContext";
+import AuthContext from "../../contexts/AuthContext";
+import MoviesContext from "../../contexts/MoviesContext";
 
-import apiClient from "../services/api";
+import apiClient from "../../services/api";
 import ShortMovieCard from "./ShortMovieCard";
 function Timeline(props) {
   const {timeline} = useContext(MoviesContext);  

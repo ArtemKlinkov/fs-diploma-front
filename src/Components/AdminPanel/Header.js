@@ -1,4 +1,4 @@
-import '../admin.css';
+import '../../admin.css';
 
 function Header() {
   return(

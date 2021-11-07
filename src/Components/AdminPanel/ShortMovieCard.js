@@ -1,4 +1,4 @@
-import MoviesContext from "../contexts/MoviesContext";
+import MoviesContext from "../../contexts/MoviesContext";
 import { useContext } from "react";
 
 function ShortMovieCard(props) {

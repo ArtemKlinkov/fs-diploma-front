@@ -1,5 +1,5 @@
-import poster from "../img/poster.png"
-import MoviesContext from "../contexts/MoviesContext";
+import poster from "../../img/poster.png"
+import MoviesContext from "../../contexts/MoviesContext";
 import { useContext } from "react";
 
 function Movie(props) {
