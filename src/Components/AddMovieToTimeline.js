@@ -6,13 +6,13 @@ import closeButton from "../img/close.png"
 import HallContext from "../contexts/HallContext";
 import MoviesContext from "../contexts/MoviesContext";
 
-function AddMovie(props) {
+function AddMovieToTimeline() {
 
-  const {showAddToTimelinePopup, handleShowAddToTimelinePopup} = useContext(MoviesContext);
+  const {showAddToTimelinePopup, handleShowAddToTimelinePopup, addedMovie, handleAddMovieToTimeline} = useContext(MoviesContext);
   const {halls} = useContext(HallContext);
 
   const [form, setForm] = useState({hall: "", start_time: ""})
-  
+
   const handleCancel = (evt) => {
     evt.preventDefault();
     handleShowAddToTimelinePopup();
@@ -23,6 +23,12 @@ function AddMovie(props) {
     const name = target.name;
     const value = target.value;
     setForm(prevForm => {return {...prevForm, [name]: value };});
+  }
+
+  const sendForm = (e) => {
+    e.preventDefault();
+    handleAddMovieToTimeline(addedMovie, form.hall === '' ? halls[0].id : form.hall, form.start_time);
+    setForm({hall: "", start_time: ""});    
   }
 
 
@@ -38,14 +44,14 @@ function AddMovie(props) {
 
           </div>
           <div className="popup__wrapper">
-            <form action="add_movie" method="post" accept-charset="utf-8">
-              <label className="conf-step__label conf-step__label-fullsize" for="hall">
+            <form onSubmit={sendForm} acceptCharset="utf-8">
+              <label className="conf-step__label conf-step__label-fullsize" htmlFor="hall">
                 Название зала
-                <select className="conf-step__input" onChange={handleChange} name="hall" required>
-                  {halls.map( (hall, index) =>  <option value={hall.id} selected={index === 0}>{hall.name}</option>)}
+                <select className="conf-step__input" name="hall" required onChange={handleChange}>
+                  {halls.map( (hall, index) =>  <option key={index} value={hall.id} defaultValue={index === 0}>{hall.name}</option>)}
                 </select>
               </label>
-              <label className="conf-step__label conf-step__label-fullsize" for="name">
+              <label className="conf-step__label conf-step__label-fullsize" htmlFor="name">
                 Время начала
                 <input className="conf-step__input" onChange={handleChange} type="time" value={form.start_time} name="start_time" required/>
               </label>
@@ -63,4 +69,4 @@ function AddMovie(props) {
 
 }
 
-export default AddMovie
+export default AddMovieToTimeline

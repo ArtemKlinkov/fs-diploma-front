@@ -50,6 +50,17 @@ function HallProvider(props) {
     }
   };
 
+  const handleOpenSales = (hall_id, is_active) => {
+    apiClient.post(`${process.env.REACT_APP_CINEMA_API}/api/hall/${hall_id}/active/${+is_active}`, null, config)
+    .then((response) => {
+      setHalls(halls.map((el) => {if (el.id === hall_id) {
+        el.is_active = is_active;
+      }
+      return el}));
+    })
+    .catch(err => console.warn(err));
+  }  
+
   useEffect(() => {
   
     apiClient.get(process.env.REACT_APP_CINEMA_API +  '/api/hall', config).then( response => {
@@ -60,7 +71,7 @@ function HallProvider(props) {
   }, []);
 
   return(
-    <HallContext.Provider value={{halls, handleDelete, handleCreateHall, showDeletePopup, handleShowDeletePopup, showCreatePopup, handleShowCreatePopup, deletingHall, error}}>
+    <HallContext.Provider value={{halls, handleDelete, handleCreateHall, showDeletePopup, handleShowDeletePopup, showCreatePopup, handleShowCreatePopup, deletingHall, handleOpenSales, error}}>
       {props.children}
     </HallContext.Provider>
   )

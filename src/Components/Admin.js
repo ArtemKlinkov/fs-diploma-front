@@ -13,6 +13,7 @@ import OpenSales from './OpenSales';
 import MoviesProvider from '../Providers/MoviesProvider';
 import AddMovie from './AddMovie';
 import AddMovieToTimeline from './AddMovieToTimeline';
+import DeleteMovieFromTimeline from './DeleteMovieFromTimeline';
 
 
 
@@ -33,6 +34,7 @@ function Admin() {
         <AddHall />
         <AddMovie />
         <AddMovieToTimeline />
+        <DeleteMovieFromTimeline />
         <Header />
         <main className="conf-steps">
           <HallController />
